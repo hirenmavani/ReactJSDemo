@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/css/styles.css">
+  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<div class="flex-container">
+<header>
+  <div class="logo"></div>
+   <div id="home" class="home"></div>
+</header>
+
+
+<article class="article">
+  <h1>Choose a service to book?</h1>
+  <div class="menu">
+  
+   <span id="service" class="service"><div>Book by Service</div><br/><div class="about">Browse our services. Pick one and we will display all the locations that offer the service</div> </span>
+   <span class="off-service"><div>Book by Location</div><br/><div class="off-about">
+Choose a location to see what services it offers. We'll start with locations closest to you
+</div></span>
+  </div>
+<div id="services" class="servicesearch">
+ 	<textarea id="tags" class="text-area-search">Enter Service Name</textarea></color>
+  	<div id="subservices" class="serviceBox">
+        </div>      
+</div>
+<div id="selectedservice" class="selectedservice"></div>
+	</article>
+
+<footer></footer>
+</div>
+
+
+	
+	<script type="text/javascript" src="/resources/js/servicedata.js"></script>
+</body>
+</html>

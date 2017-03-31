@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<meta charset="utf-8">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/themes/material_red.css"> 
+		<link rel="stylesheet" href="/resources/css/styles.css"> 
+		<link rel="stylesheet" href="/resources/js/jquery/css/screen.css">
+		<script src="https://unpkg.com/flatpickr"></script>
+	</head>
+	<body>
+
+<div class="flex-container">
+	<header>
+	  <div class="logo"></div>
+	  <div id="home" class="home"></div>
+	</header>
+
+	<article class="article">
+	 	 <h1>Finalize your Appointment</h1>
+		<form id="form-name" class="form-line" name="form-name">
+	   		<div class="form-field">
+	       		<label class="form-text">
+	       				Please enter your contact information to complete your booking
+	    	   </label>
+	   	</div>
+	   	<div class="form-field">
+	     	 <input class="form-field-input" id="input1" type="text" placeholder="" />
+	      	<label class="form-field-label" for="input1">
+	        		 First Name
+	      	</label>
+	   	</div>
+	  	<div class="form-field">
+	      <input class="form-field-input" id="input2" type="text" placeholder="" />
+	      <label class="form-field-label" for="input2">
+	         Last Name
+	      </label>
+	   </div>
+	  	<div class="form-field">
+	      <input class="form-field-input" id="input3" type="email" placeholder="" />
+	      <label class="form-field-label" for="input3">
+	         Email address
+	      </label>
+	   	</div>
+	  <div class="form-field">
+	      <input class="form-field-input" id="input4" type="text" placeholder="" />
+	      <label class="form-field-label" for="input4">
+	         Phone number
+	      </label>
+	   </div>
+	   <div class="form-field">
+	       <label class="form-text">
+	       Would you like to receive promotional information via email regarding our services?
+	       </label>
+	   </div>
+	  <div class="form-field">
+	      <label class="label-check"><input class="input-check" type="checkbox" /> Yes, please email me from time to time</label>
+	   </div>
+	   <div class="form-field">
+	       <label class="form-text-sub">
+	       Once all information is complete, please review the details to the right and click the 'Complete Booking' button to schedule your appointment
+	       </label>
+	   </div>
+	</form>
+	<div id="selectedservice" class=confirmRO>
+	
+	</div>
+	<div id="confirmation">
+	<div class="circle">
+	<div class="checkmark"></div>
+	</div>
+	<div id="final">Appointment Booked<br/><div id="random"></div> </div>
+	</div>
+	</article>
+
+	<footer></footer>
+	</div>
+
+	<script type="text/javascript" src="/resources/js/bookingcheck.js"></script>
+	<script type="text/javascript" src="/resources/js/jquery/js/jquery.validate.js"></script>
+	<script type="text/javascript" src="/resources/js/jquery/js/jquery.validate.min.js"></script>
+	</body>
+</html>

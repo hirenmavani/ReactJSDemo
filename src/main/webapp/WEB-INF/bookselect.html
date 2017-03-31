@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    color: white;
+    
+}
+
+.flex-container > * {
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    font-family: Verdana;
+    background-image: url("images/background.jpg");
+}
+
+header {background: white;color:white;}
+footer {background: #333333;color:white;}
+.nav {background:#eee;}
+.nav {background-image: url("images/background.jpg");}
+
+.off-about {
+    color: grey;
+    font-family:Verdana;
+    font-size:16px;
+    width: 250px;
+    display: block;
+}
+.about {
+    color: white;
+    font-family:Verdana;
+    font-size:16px;
+    width: 250px;
+    display: block;
+}
+.off-service {
+    color: grey;
+    align: left;
+    font-family:Verdana;
+    font-size:24px;
+    width: 250px;
+    padding: 50px;
+    border: 2px solid grey;
+    margin: 0; 
+    word-wrap: break-word;
+    display: block;
+    margin: 10px;
+}
+.service {
+    color: white;
+    align: left;
+    font-family:Verdana;
+    font-size:24px;
+    cursor: pointer; 
+    cursor: hand;      
+    width: 250px;
+    padding: 50px;
+    border: 2px solid white;
+    margin: 0; 
+    word-wrap: break-word;
+    display: block;
+    margin: 10px;
+}
+.features {
+    width: 350px;
+    word-wrap: break-word;
+    display: inline-block;
+    margin: 10px;
+}
+.serviceRO {
+color:grey;display:inline-block;vertical-align:top;width:25%;margin-left:50px;margin-top:10px;border-radius:5px;
+}
+
+.locationRO {
+color:grey;width:25%;vertical-align:top;padding:10px;margin-top:62px;border-radius:5px;border:1px solid white;background:white;
+}
+.locationSearch {
+padding-top: 10px;width:100%;height: 41px;font-size: 24px;font-family: Verdana;text-align: center;color:grey
+}
+.locationBox {
+display:inline-block;vertical-align:top;width:30%;margin-left:50px;margin-top:10px;
+}
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+<header>
+  <h1 style="color: white;text-align:center;"><img src="/resources/images/next.png" height="80" width="200" align="left"></img></h1>
+</header>
+
+
+<article class="article">
+  <h1 style="font-family: Verdana;font-size: 42px;font-weight: initial;text-align:center">Select a day and time</h1>
+
+<div id="selectedservice" class=serviceRO>
+
+</div>
+<div id="selectedlocation" class="serviceRO">
+</div>
+
+<script>
+    var desc =(localStorage.getItem("desc"));
+    var cost = (localStorage.getItem("cost"));
+    var duration = (localStorage.getItem("duration"));
+    var divID = (localStorage.getItem("divID"));
+    var divName = (localStorage.getItem("div"));
+
+    addDetailstoDiv="<div style='padding:10px;width:90%;height:80%;display:inline-block;color:grey;border:1px solid black;background:white;border-radius:5px;' id='D-"+divID+"'><div style='text-align:center;font-size:16pt;'>"+divName+"</div><br/><br/><span style='font-size:12pt;color:grey'>What you can expect</span><br/><br/><span style='font-size:10pt'>"+desc+"</span><br/><br/><div style='align:center;font-size:12pt;text-align:center'>"+duration+"</div><div style='align:center;font-size:12pt;text-align:center'>"+cost+"</div><br/><br/><div style='align:center;text-align:center;margin:50px;padding:10px;font-size:16pt;border:2px solid grey;color:lightgrey'>Change Service</div><br/><br/></div>";
+
+    $("#selectedservice").append(addDetailstoDiv);
+ var LocdivID = localStorage.getItem("LocdivID");
+ var Locdiv = localStorage.getItem("LocdivID");
+ var LocdescTitle = localStorage.getItem("LocdescTitle");
+ var Locduration = localStorage.getItem("Locduration");
+
+    addDetailstoDiv="<div style='padding:10px;width:90%;height:80%;display:inline-block;color:grey;border:1px solid black;background:white;border-radius:5px;' id='D-"+LocdivID+"'><div style='text-align:center;font-size:16pt;'>"+Locdiv+"</div><br/><br/><span style='font-size:12pt;color:grey'></span><br/><br/><span style='font-size:10pt'>"+LocdescTitle+"</span><br/><br/><div style='align:center;font-size:12pt;text-align:center'>"+Locduration+"</div><div style='align:center;font-size:12pt;text-align:center'>"+cost+"</div><br/><br/><div style='align:center;text-align:center;margin:50px;padding:10px;font-size:16pt;border:2px solid grey;color:lightgrey'>Change Location</div><br/><br/></div>";
+    $("#selectedlocation").append(addDetailstoDiv);
+</script>
+</article>
+
+<footer><img src="/resources/images/footer.png" align="right" width=200 height=60></img></footer>
+</div>
+
+</body>
+</html>
